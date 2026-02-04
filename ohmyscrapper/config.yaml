@@ -1,0 +1,19 @@
+ai:
+  default_prompt_file: prompt.md
+db:
+  db_file: local.db
+default_dirs:
+  db: ./ohmyscrapper_db
+  input: ./ohmyscrapper_input
+  output: ./ohmyscrapper_output
+  prompts: ./ohmyscrapper_prompts
+  templates: ./ohmyscrapper_templates
+  cache: ./ohmyscrapper_cache
+default_files:
+  url_sniffing: url_sniffing.yaml
+  url_types: url_types.yaml
+sniffing:
+  browser-waiting-time: 5
+  round-sleeping: 10
+  timeout: 10
+  use-browser: false

@@ -1,0 +1,11 @@
+linkedin_company: https://%.linkedin.com/company/%
+linkedin_feed: https://%.linkedin.com/feed/%
+linkedin_job: https://%.linkedin.com/jobs/view/%
+linkedin_post: https://%.linkedin.com/posts/%
+linkedin_redirect: https://lnkd.in/%
+instagram: https://%instagram.com/p/%
+bitly: https://bit.ly/%
+gupy: https://%gupy.io/%
+google_forms: https://forms.gle/%
+google_forms_literal: https://docs.google.com/forms/%
+google_drive: https://drive.google.com/drive/%

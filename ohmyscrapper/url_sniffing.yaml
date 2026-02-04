@@ -1,0 +1,84 @@
+bitly:
+  bodytags:
+    h1: title
+  metatags:
+    description: description
+    og:description: description
+    og:title: title
+    og:url: url_destiny
+google_drive:
+  bodytags:
+    h1: title
+  metatags:
+    description: description
+    og:description: description
+    og:title: title
+google_forms:
+  bodytags:
+    h1: title
+  metatags:
+    description: description
+    og:description: description
+    og:title: title
+google_forms_literal:
+  bodytags:
+    h1: title
+  metatags:
+    description: description
+    og:description: description
+    og:title: title
+gupy:
+  bodytags:
+    h1: title
+  metatags:
+    description: description
+    og:description: description
+    og:title: title
+instagram:
+  bodytags:
+    h1: title
+  metatags:
+    description: description
+    og:description: description
+    og:title: title
+linkedin_feed:
+  metatags:
+    og:url: url_destiny
+linkedin_job:
+  bodytags:
+    h1: title
+  metatags:
+    description: description
+    og:description: description
+    og:title: title
+linkedin_post:
+  bodytags:
+    dev.update-components-text: description
+    h1: title
+    span.update-components-actor__single-line-truncat: title
+  metatags:
+    description: description
+    og:description: description
+    og:title: title
+linkedin_redirect:
+  atags:
+    first-tag-as-url_destiny: 5
+  metatags:
+    og:url: url_destiny
+read_all_a_tags:
+  atags:
+    load_links: true
+.nan:
+  bodytags:
+    h1: title
+  metatags:
+    description: description
+    og:description: description
+    og:title: title
+generic:
+  bodytags:
+    h1: title
+  metatags:
+    description: description
+    og:description: description
+    og:title: title
