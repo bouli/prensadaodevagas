@@ -15,3 +15,4 @@ chats
 /ohmyscrapper_output
 .env
 /public
+.DS_Store

@@ -64,6 +64,18 @@ wheels = [
 ]
 
 [[package]]
+name = "bs4"
+version = "0.0.2"
+source = { registry = "https://pypi.org/simple" }
+dependencies = [
+    { name = "beautifulsoup4" },
+]
+sdist = { url = "https://files.pythonhosted.org/packages/c9/aa/4acaf814ff901145da37332e05bb510452ebed97bc9602695059dd46ef39/bs4-0.0.2.tar.gz", hash = "sha256:a48685c58f50fe127722417bae83fe6badf500d54b55f7e39ffe43b798653925", size = 698, upload-time = "2024-01-17T18:15:47.371Z" }
+wheels = [
+    { url = "https://files.pythonhosted.org/packages/51/bb/bf7aab772a159614954d84aa832c129624ba6c32faa559dfb200a534e50b/bs4-0.0.2-py2.py3-none-any.whl", hash = "sha256:abf8742c0805ef7f662dce4b51cca104cffe52b835238afc169142ab9b3fbccc", size = 1189, upload-time = "2024-01-17T18:15:48.613Z" },
+]
+
+[[package]]
 name = "certifi"
 version = "2026.1.4"
 source = { registry = "https://pypi.org/simple" }
@@ -284,6 +296,17 @@ wheels = [
 ]
 
 [[package]]
+name = "dotenv"
+version = "0.9.9"
+source = { registry = "https://pypi.org/simple" }
+dependencies = [
+    { name = "python-dotenv" },
+]
+wheels = [
+    { url = "https://files.pythonhosted.org/packages/b2/b7/545d2c10c1fc15e48653c91efde329a790f2eecfbbf2bd16003b5db2bab0/dotenv-0.9.9-py2.py3-none-any.whl", hash = "sha256:29cf74a087b31dafdb5a446b6d7e11cbce8ed2741540e2339c69fbef92c94ce9", size = 1892, upload-time = "2025-02-19T22:15:01.647Z" },
+]
+
+[[package]]
 name = "filelock"
 version = "3.20.3"
 source = { registry = "https://pypi.org/simple" }
@@ -313,7 +336,7 @@ requests = [
 
 [[package]]
 name = "google-genai"
-version = "1.61.0"
+version = "1.62.0"
 source = { registry = "https://pypi.org/simple" }
 dependencies = [
     { name = "anyio" },
@@ -327,9 +350,9 @@ dependencies = [
     { name = "typing-extensions" },
     { name = "websockets" },
 ]
-sdist = { url = "https://files.pythonhosted.org/packages/69/38/421cd7e70952a536be87a0249409f87297d84f523754a25b08fe94b97e7f/google_genai-1.61.0.tar.gz", hash = "sha256:5773a4e8ad5b2ebcd54a633a67d8e9c4f413032fef07977ee47ffa34a6d3bbdf", size = 489672, upload-time = "2026-01-30T20:50:27.177Z" }
+sdist = { url = "https://files.pythonhosted.org/packages/94/4c/71b32b5c8db420cf2fd0d5ef8a672adbde97d85e5d44a0b4fca712264ef1/google_genai-1.62.0.tar.gz", hash = "sha256:709468a14c739a080bc240a4f3191df597bf64485b1ca3728e0fb67517774c18", size = 490888, upload-time = "2026-02-04T22:48:41.989Z" }
 wheels = [
-    { url = "https://files.pythonhosted.org/packages/0e/87/78dd70cb59f7acf3350f53c5144a7aa7bc39c6f425cd7dc1224b59fcdac3/google_genai-1.61.0-py3-none-any.whl", hash = "sha256:cb073ef8287581476c1c3f4d8e735426ee34478e500a56deef218fa93071e3ca", size = 721948, upload-time = "2026-01-30T20:50:25.551Z" },
+    { url = "https://files.pythonhosted.org/packages/09/5f/4645d8a28c6e431d0dd6011003a852563f3da7037d36af53154925b099fd/google_genai-1.62.0-py3-none-any.whl", hash = "sha256:4c3daeff3d05fafee4b9a1a31f9c07f01bc22051081aa58b4d61f58d16d1bcc0", size = 724166, upload-time = "2026-02-04T22:48:39.956Z" },
 ]
 
 [[package]]
@@ -510,7 +533,7 @@ wheels = [
 
 [[package]]
 name = "ohmyscrapper"
-version = "0.9.0"
+version = "0.9.5"
 source = { registry = "https://pypi.org/simple" }
 dependencies = [
     { name = "beautifulsoup4" },
@@ -522,11 +545,12 @@ dependencies = [
     { name = "requests" },
     { name = "rich" },
     { name = "selenium" },
+    { name = "unforgettable" },
     { name = "urlextract" },
 ]
-sdist = { url = "https://files.pythonhosted.org/packages/37/08/4b546dbf7cb610dad2a91dc013baada85f149116ae990b0388be7f7151a1/ohmyscrapper-0.9.0.tar.gz", hash = "sha256:907e93ec244ae5544430c33145f34dafc774f3429545a37ec8c1c18ac41237f9", size = 17025, upload-time = "2026-02-04T16:54:50.475Z" }
+sdist = { url = "https://files.pythonhosted.org/packages/da/b4/b79d8f6f3d4508e07ef7b61d9afe4a2e0c8d05153d0bd8896621688ba4be/ohmyscrapper-0.9.5.tar.gz", hash = "sha256:bc2e5391febd177e887091c3f4a0a110d52079cf2a9c29128575f4fc2ffc1490", size = 16252, upload-time = "2026-02-09T13:44:02.646Z" }
 wheels = [
-    { url = "https://files.pythonhosted.org/packages/93/d3/c068e1c30c26a3240b4fce6400c8480d8d49deb23af3658c4a178fc03128/ohmyscrapper-0.9.0-py3-none-any.whl", hash = "sha256:bdb912c399ea1ea280b3c1464b26be65eb26e137c82951d0dd58f53c82de543a", size = 23922, upload-time = "2026-02-04T16:54:52.091Z" },
+    { url = "https://files.pythonhosted.org/packages/91/c6/acc8f7842b60a5430b6c37282f9946616daabd32d539aaa760a4338823c4/ohmyscrapper-0.9.5-py3-none-any.whl", hash = "sha256:fc9a2e44b8e165b1f6296aee5f3b8c0a220d495c3e28e32c115b2b5dd0fa2649", size = 22865, upload-time = "2026-02-09T13:44:00.279Z" },
 ]
 
 [[package]]
@@ -624,11 +648,23 @@ name = "prensadaodevagas-com-br"
 version = "0.1.0"
 source = { virtual = "." }
 dependencies = [
+    { name = "dotenv" },
     { name = "ohmyscrapper" },
+    { name = "pandas" },
+    { name = "unforgettable" },
+    { name = "urlextract" },
+    { name = "urlicon" },
 ]
 
 [package.metadata]
-requires-dist = [{ name = "ohmyscrapper", specifier = ">=0.9.0" }]
+requires-dist = [
+    { name = "dotenv", specifier = ">=0.9.9" },
+    { name = "ohmyscrapper" },
+    { name = "pandas", specifier = ">=3.0.0" },
+    { name = "unforgettable", specifier = ">=0.1.1" },
+    { name = "urlextract", specifier = ">=1.9.0" },
+    { name = "urlicon" },
+]
 
 [[package]]
 name = "pyasn1"
@@ -964,11 +1000,11 @@ wheels = [
 
 [[package]]
 name = "tenacity"
-version = "9.1.2"
+version = "9.1.4"
 source = { registry = "https://pypi.org/simple" }
-sdist = { url = "https://files.pythonhosted.org/packages/0a/d4/2b0cd0fe285e14b36db076e78c93766ff1d529d70408bd1d2a5a84f1d929/tenacity-9.1.2.tar.gz", hash = "sha256:1169d376c297e7de388d18b4481760d478b0e99a777cad3a9c86e556f4b697cb", size = 48036, upload-time = "2025-04-02T08:25:09.966Z" }
+sdist = { url = "https://files.pythonhosted.org/packages/47/c6/ee486fd809e357697ee8a44d3d69222b344920433d3b6666ccd9b374630c/tenacity-9.1.4.tar.gz", hash = "sha256:adb31d4c263f2bd041081ab33b498309a57c77f9acf2db65aadf0898179cf93a", size = 49413, upload-time = "2026-02-07T10:45:33.841Z" }
 wheels = [
-    { url = "https://files.pythonhosted.org/packages/e5/30/643397144bfbfec6f6ef821f36f33e57d35946c44a2352d3c9f0ae847619/tenacity-9.1.2-py3-none-any.whl", hash = "sha256:f77bf36710d8b73a50b2dd155c97b870017ad21afe6ab300326b0371b3b05138", size = 28248, upload-time = "2025-04-02T08:25:07.678Z" },
+    { url = "https://files.pythonhosted.org/packages/d7/c1/eb8f9debc45d3b7918a32ab756658a0904732f75e555402972246b0b8e71/tenacity-9.1.4-py3-none-any.whl", hash = "sha256:6095a360c919085f28c6527de529e76a06ad89b23659fa881ae0649b867a9d55", size = 28926, upload-time = "2026-02-07T10:45:32.24Z" },
 ]
 
 [[package]]
@@ -1068,6 +1104,15 @@ wheels = [
 ]
 
 [[package]]
+name = "unforgettable"
+version = "0.1.1"
+source = { registry = "https://pypi.org/simple" }
+sdist = { url = "https://files.pythonhosted.org/packages/bf/d7/4775c26ded0118757ded8bf65d95a25a296da8e4fe0e6b4072bec0bf2853/unforgettable-0.1.1.tar.gz", hash = "sha256:744e4da20bd721d8661a41dc3bf6c5f913731c01a2ceb75526723ca32e0b292e", size = 2938, upload-time = "2026-02-09T13:37:15.067Z" }
+wheels = [
+    { url = "https://files.pythonhosted.org/packages/c1/1d/bfd30ccddf099fc36fdd4445198dc74887e471f31d336ee12c41753ee288/unforgettable-0.1.1-py3-none-any.whl", hash = "sha256:da2a1b517db204167023215df8ac03cba263b21461544b1c9ba16ddb69e9c6dc", size = 2982, upload-time = "2026-02-09T13:37:16.363Z" },
+]
+
+[[package]]
 name = "uritools"
 version = "6.0.1"
 source = { registry = "https://pypi.org/simple" }
@@ -1089,6 +1134,21 @@ dependencies = [
 sdist = { url = "https://files.pythonhosted.org/packages/e1/1d/57a552551f851c6db5e5d66f505548d47dd3f734a8e648f9d4f05e4e5ac9/urlextract-1.9.0.tar.gz", hash = "sha256:70508e02ba9df372e25cf0642db367cece273e8712cd0ce78178fc5dd7ea00db", size = 35369, upload-time = "2024-02-29T09:14:24.221Z" }
 wheels = [
     { url = "https://files.pythonhosted.org/packages/cb/cb/82ef2994dec66351aaffa45061f30051b6b557bf592952f14657f38b6e43/urlextract-1.9.0-py3-none-any.whl", hash = "sha256:f88963532488b1c7c405e21bd162ae97871754ea04b60e18d33ee075b19b82fd", size = 21460, upload-time = "2024-02-29T09:14:22.297Z" },
+]
+
+[[package]]
+name = "urlicon"
+version = "0.2.4"
+source = { registry = "https://pypi.org/simple" }
+dependencies = [
+    { name = "bs4" },
+    { name = "dotenv" },
+    { name = "requests" },
+    { name = "unforgettable" },
+]
+sdist = { url = "https://files.pythonhosted.org/packages/b8/67/b563aa603cf6d1aecf2ace749ecd9e471598977412d022fd93d3c41da65c/urlicon-0.2.4.tar.gz", hash = "sha256:27b7ae7607c3f5e8a12dc907eb42632f4c6f5cb01545c2e868d21c50a2964be6", size = 3853, upload-time = "2026-02-05T20:30:48.378Z" }
+wheels = [
+    { url = "https://files.pythonhosted.org/packages/8c/4a/cf75c6e19fedbb6a0e21773dc9ff00ac3ee1f07fb5e3e15962cb20b70722/urlicon-0.2.4-py3-none-any.whl", hash = "sha256:d87cf727498bd79cce630a526fe352c9df27c17bda6828f041e5916e2d985f2f", size = 4083, upload-time = "2026-02-05T20:30:47.033Z" },
 ]
 
 [[package]]
