@@ -11,3 +11,7 @@ pren:
 
 render:
 	uv run tools/03_render.py
+
+publish:
+	rm -rf ~/personal/boulihub/validando.prensadaodevagas.com.br
+	cp -a ./public ~/personal/boulihub/validando.prensadaodevagas.com.br
