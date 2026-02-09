@@ -1,0 +1,422 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Prensadão de Vagas de Impacto - »Comunidade Vagas de Impacto Social«</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/font/bootstrap-icons.css">
+        <style>
+        body {
+            background-color: #f8f9fa;
+        }
+
+        .hero-section {
+            background: linear-gradient(135deg, #05c701 0%, #764ba2 100%);
+            background-image: url(images/hero.jpeg) ;
+            background-size: cover;
+            background-position: center;
+            color: white;
+            text-shadow:
+                0px 0px 0px black,
+                0 0 1em black,
+                0 0 0 black;
+            padding: 60px 0;
+            margin-bottom: 40px;
+        }
+        .hero-photo-credits {
+            text-align: right;
+            float: right;
+            padding: 20px 20px;
+            color:gray;
+            font-size: xx-small;
+        }
+
+        .search-box {
+            background: white;
+            border-radius: 10px;
+            padding: 30px;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+            margin-top: -50px;
+        }
+
+        .job-card {
+            background: white;
+            border-radius: 10px;
+            padding: 25px;
+            margin-bottom: 20px;
+            border: 1px solid #e0e0e0;
+            transition: all 0.3s ease;
+        }
+
+        .job-card:hover {
+            box-shadow: 0 5px 20px rgba(0,0,0,0.1);
+            transform: translateY(-2px);
+        }
+
+        .company-logo {
+            width: 60px;
+            height: 60px;
+            background: #f0f0f0;
+            border-radius: 8px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 24px;
+            color: #667eea;
+            font-weight: bold;
+
+            overflow: hidden;
+        }
+
+        .company-logo img {
+            border-radius: 8px;
+            max-width: 60px;
+            max-height: 60px;
+        }
+
+        .job-type-badge {
+            font-size: 12px;
+            padding: 5px 12px;
+            border-radius: 20px;
+        }
+
+        .salary-text {
+            color: #28a745;
+            font-weight: 600;
+        }
+
+        .stats-section {
+            padding: 20px;
+            margin-bottom: 30px;
+        }
+        .section-title {
+            position: relative;
+            margin-bottom: 50px;
+            padding-bottom: 15px;
+        }
+
+        .section-title::after {
+            content: '';
+            position: absolute;
+            bottom: 0;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 80px;
+            height: 3px;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+        }
+
+        .about-card {
+            background: white;
+            border-radius: 15px;
+            padding: 40px;
+            box-shadow: 0 5px 20px rgba(0,0,0,0.08);
+            margin-bottom: 30px;
+            height: 100%;
+        }
+
+        .icon-box {
+            width: 70px;
+            height: 70px;
+            border-radius: 15px;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 32px;
+            margin-bottom: 20px;
+        }
+
+        .team-card {
+            background: white;
+            border-radius: 15px;
+            padding: 30px;
+            text-align: center;
+            box-shadow: 0 5px 20px rgba(0,0,0,0.08);
+            transition: all 0.3s ease;
+            margin-bottom: 30px;
+        }
+
+        .team-card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 10px 30px rgba(0,0,0,0.15);
+        }
+
+        .team-avatar {
+            width: 150px;
+            height: 150px;
+            border-radius: 50%;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 48px;
+            font-weight: bold;
+            margin: 0 auto 20px;
+            border: 5px solid #f8f9fa;
+        }
+
+        .social-links a {
+            display: inline-block;
+            width: 40px;
+            height: 40px;
+            border-radius: 50%;
+            background: #f0f0f0;
+            color: #667eea;
+            line-height: 40px;
+            margin: 0 5px;
+            transition: all 0.3s ease;
+        }
+
+        .social-links a:hover {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+            transform: scale(1.1);
+        }
+
+        .stats-box {
+            background: white;
+            border-radius: 15px;
+            padding: 30px;
+            text-align: center;
+            box-shadow: 0 5px 20px rgba(0,0,0,0.08);
+        }
+
+        .stats-number {
+            font-size: 48px;
+            font-weight: bold;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+        }
+
+        .timeline {
+            position: relative;
+            padding: 20px 0;
+        }
+
+        .timeline-item {
+            position: relative;
+            padding-left: 50px;
+            margin-bottom: 40px;
+        }
+
+        .timeline-item::before {
+            content: '';
+            position: absolute;
+            left: 10px;
+            top: 0;
+            bottom: -40px;
+            width: 2px;
+            background: #e0e0e0;
+        }
+
+        .timeline-item:last-child::before {
+            display: none;
+        }
+
+        .timeline-dot {
+            position: absolute;
+            left: 0;
+            top: 5px;
+            width: 20px;
+            height: 20px;
+            border-radius: 50%;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            border: 3px solid white;
+            box-shadow: 0 0 0 3px #e0e0e0;
+        }
+
+        .value-card {
+            text-align: center;
+            padding: 30px;
+            border-radius: 15px;
+            background: white;
+            box-shadow: 0 5px 20px rgba(0,0,0,0.08);
+            transition: all 0.3s ease;
+        }
+
+        .value-card:hover {
+            transform: translateY(-5px);
+        }
+
+        .value-icon {
+            font-size: 48px;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+            margin-bottom: 15px;
+        }
+
+        .navigation-logo {
+            font-weight: bold;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+        }
+    </style>
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="navbar navbar-expand-lg navbar-light bg-white shadow-sm">
+        <div class="container">
+            <a class="navbar-brand fw-bold text-primary navigation-logo" href="#">
+                <i class="bi bi-briefcase-fill"></i> Prensadão de Vagas de Impacto
+            </a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item">
+                        <a class="nav-link" href="index.html">Vagas</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link active" href="about.html">Sobre o Prensadão</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <div class="hero-section">
+        <div class="container text-center">
+            <h1 class="display-4 fw-bold mb-3">»Comunidade Vagas de Impacto Social«</h1>
+            <p class="lead mb-0 fw-semibold">Sobre o Prensadão</p>
+        </div>
+        <div class="hero-photo-credits">Foto de Brian J. Tromp</div>
+    </div>
+
+
+    <!-- People Section -->
+    <div class="container mb-5">
+        <h2 class="text-center section-title">Pessoas e organizações que compartilham Vagas de Impacto no Brasil</h2>
+        <div class="row justify-content-center">
+            <div class="col-lg-10">
+                <div class="about-card">
+                    <div>
+                        <p class="has-line-data" data-line-start="0" data-line-end="16">
+                            📌 Perfil Carla Perdiz - Vagas da ONU e outras organizações – <a href="https://www.linkedin.com/in/carlaperdiz/">https://www.linkedin.com/in/carlaperdiz/</a><br>
+                            📌 Perfil Carlos Eduardo - Vagas Florestais-Ambientais - <a href="https://www.linkedin.com/in/carlos-eduardo-batistade-oliveira/">https://www.linkedin.com/in/carlos-eduardo-batistade-oliveira/</a><br>
+                            📌 Perfil Mateus Tozelli - Vagas Cultura, Educação, Impacto etc. - <a href="https://www.linkedin.com/in/mmtozelli/">https://www.linkedin.com/in/mmtozelli/</a><br>
+                            📌 Perfil da Trabalhar com Impacto - <a href="https://www.linkedin.com/company/trabalharcomimpacto">https://www.linkedin.com/company/trabalharcomimpacto</a><br>
+                            📌 Perfil da Daiane Dultra – <a href="https://www.linkedin.com/in/daiane-dultra/">https://www.linkedin.com/in/daiane-dultra/</a><br>
+                            📌 Perfil da Youth Climate Leaders – <a href="https://www.linkedin.com/company/youthclimateleaders/">https://www.linkedin.com/company/youthclimateleaders/</a><br>
+                            📌 Perfil do Marcus Nakagawa – <a href="https://www.linkedin.com/in/marcusnakagawa/">https://www.linkedin.com/in/marcusnakagawa/</a><br>
+                            📌 Perfil do Pedro Mattosinhos - <a href="https://www.linkedin.com/in/pedromattosinhos/">https://www.linkedin.com/in/pedromattosinhos/</a><br>
+                            📌 Perfil do Caio Dib – <a href="https://www.linkedin.com/in/caiodib/">https://www.linkedin.com/in/caiodib/</a><br>
+                            📌 Página do Advocacy Hub - <a href="https://www.advocacyhub.org/oportunidades">https://www.advocacyhub.org/oportunidades</a><br>
+                            📌 Perfil do CGPPInsper - <a href="https://www.linkedin.com/company/cgpp-insper/">https://www.linkedin.com/company/cgpp-insper/</a><br>
+                            📌 Perfil da Aline Lazzari - <a href="https://www.linkedin.com/in/aline-lazzari">https://www.linkedin.com/in/aline-lazzari</a><br>
+                            📌 Perfil do Rafael Silva - <a href="https://www.linkedin.com/in/edurafaelsilva/">https://www.linkedin.com/in/edurafaelsilva/</a><br>
+                            📌 Perfil Hezi Impacto Social - <a href="https://www.linkedin.com/company/hezii/">https://www.linkedin.com/company/hezii/</a><br>
+                            📌 Plataforma de Vagas ABCR - <a href="https://captadores.org.br/vagas/">https://captadores.org.br/vagas/</a>
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- People Section -->
+    <div class="container mb-5">
+        <h2 class="text-center section-title">Plataformas de Vagas de Impacto Internacionais</h2>
+        <div class="row justify-content-center">
+            <div class="col-lg-10">
+                <div class="about-card">
+                    <div>
+                        <p class="has-line-data" data-line-start="0" data-line-end="16">
+                            🌍 Matteria - Vagas América Latina - <a href="https://www.linkedin.com/company/matteria-/">https://www.linkedin.com/company/matteria-/</a><br>
+                            🌍 Ethos Atlas (: <a href="https://www.linkedin.com/company/ethosatlas/posts/?feedView=all">https://www.linkedin.com/company/ethosatlas/posts/?feedView=all</a><br>
+                            🌍 The Bloom - <a href="https://www.readtobloom.com">https://www.readtobloom.com</a><br>
+                            🌍 Remote Impact Jobs - <a href="https://www.linkedin.com/newsletters/remote-impact-jobs-6989818730562101248/">https://www.linkedin.com/newsletters/remote-impact-jobs-6989818730562101248/</a><br>
+                            🌍 WIAN - <a href="https://www.wianetwork.com/jobs">https://www.wianetwork.com/jobs</a><br>
+                            🌍 Compilado de vagas do Nick Martin - <a href="https://www.linkedin.com/in/nicholascmartin/">https://www.linkedin.com/in/nicholascmartin/</a><br>
+                            🌍 Compilado de vagas da Mara Tissera Luna - <a href="https://www.linkedin.com/in/maratisseraluna/">https://www.linkedin.com/in/maratisseraluna/</a><br>
+                            🌍 Compilado de vagas da Ludovica Anedda - <a href="https://www.linkedin.com/in/ludovicaanedda/">https://www.linkedin.com/in/ludovicaanedda/</a><br>
+                            🌍 Compilado vagas Rawan - <a href="https://www.linkedin.com/in/rawan-taha/">https://www.linkedin.com/in/rawan-taha/</a><br>
+                            🌍 Newsletter #AfricaJobs Board - <a href="https://www.linkedin.com/newsletters/6929530599288225792/">https://www.linkedin.com/newsletters/6929530599288225792/</a><br>
+                            🌍 Impact Pool - <a href="https://www.impactpool.org/search">https://www.impactpool.org/search</a><br>
+                            🌍 Global Charity Jobs - <a href="https://globalcharityjobs.com">https://globalcharityjobs.com</a><br>
+                            🌍 Relief Web - <a href="https://reliefweb.int/jobs">https://reliefweb.int/jobs</a><br>
+                            🌍 Devex - <a href="https://www.devex.com/jobs/search">https://www.devex.com/jobs/search</a>
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <footer class="bg-dark text-white py-5">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-4 mb-4">
+                    <h5 class="mb-3"><i class="bi bi-briefcase-fill"></i> JobPortal</h5>
+                    <p class="text-muted">Connecting talent with opportunity. Your career journey starts here.</p>
+                    <div class="social-links mt-3">
+                        <a href="#" class="text-white me-3"><i class="bi bi-facebook"></i></a>
+                        <a href="#" class="text-white me-3"><i class="bi bi-twitter"></i></a>
+                        <a href="#" class="text-white me-3"><i class="bi bi-linkedin"></i></a>
+                        <a href="#" class="text-white me-3"><i class="bi bi-instagram"></i></a>
+                    </div>
+                </div>
+                <div class="col-lg-2 col-md-3 mb-4">
+                    <h6 class="mb-3">Company</h6>
+                    <ul class="list-unstyled">
+                        <li class="mb-2"><a href="about.html" class="text-muted text-decoration-none">About Us</a></li>
+                        <li class="mb-2"><a href="#" class="text-muted text-decoration-none">Careers</a></li>
+                        <li class="mb-2"><a href="#" class="text-muted text-decoration-none">Press</a></li>
+                        <li class="mb-2"><a href="#" class="text-muted text-decoration-none">Blog</a></li>
+                    </ul>
+                </div>
+                <div class="col-lg-2 col-md-3 mb-4">
+                    <h6 class="mb-3">Support</h6>
+                    <ul class="list-unstyled">
+                        <li class="mb-2"><a href="#" class="text-muted text-decoration-none">Help Center</a></li>
+                        <li class="mb-2"><a href="#" class="text-muted text-decoration-none">Contact</a></li>
+                        <li class="mb-2"><a href="#" class="text-muted text-decoration-none">FAQ</a></li>
+                        <li class="mb-2"><a href="#" class="text-muted text-decoration-none">Guidelines</a></li>
+                    </ul>
+                </div>
+                <div class="col-lg-2 col-md-3 mb-4">
+                    <h6 class="mb-3">Legal</h6>
+                    <ul class="list-unstyled">
+                        <li class="mb-2"><a href="#" class="text-muted text-decoration-none">Privacy</a></li>
+                        <li class="mb-2"><a href="#" class="text-muted text-decoration-none">Terms</a></li>
+                        <li class="mb-2"><a href="#" class="text-muted text-decoration-none">Cookies</a></li>
+                        <li class="mb-2"><a href="#" class="text-muted text-decoration-none">Licenses</a></li>
+                    </ul>
+                </div>
+                <div class="col-lg-2 col-md-3 mb-4">
+                    <h6 class="mb-3">Resources</h6>
+                    <ul class="list-unstyled">
+                        <li class="mb-2"><a href="#" class="text-muted text-decoration-none">Resume Tips</a></li>
+                        <li class="mb-2"><a href="#" class="text-muted text-decoration-none">Interview Guide</a></li>
+                        <li class="mb-2"><a href="#" class="text-muted text-decoration-none">Salary Guide</a></li>
+                        <li class="mb-2"><a href="#" class="text-muted text-decoration-none">Career Advice</a></li>
+                    </ul>
+                </div>
+            </div>
+            <hr class="my-4 bg-secondary">
+            <div class="row">
+                <div class="col-md-6 text-center text-md-start">
+                    <p class="mb-0 text-muted">&copy; 2024 JobPortal. All rights reserved.</p>
+                </div>
+                <div class="col-md-6 text-center text-md-end">
+                    <p class="mb-0 text-muted">Made with <i class="bi bi-heart-fill text-danger"></i> for job seekers everywhere</p>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>

@@ -1,0 +1,184 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Prensadão de Vagas de Impacto - »Comunidade Vagas de Impacto Social«</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/font/bootstrap-icons.css">
+    <link rel="stylesheet" href="./css/style.css">
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="navbar navbar-expand-lg navbar-light bg-white shadow-sm">
+        <div class="container">
+            <a class="navbar-brand fw-bold text-primary navigation-logo" href="#">
+                <i class="bi bi-briefcase-fill" style="display: none;"></i> Prensadão de Vagas de Impacto
+            </a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item">
+                        <a class="nav-link active" href="#sobre">Sobre o Prensadão</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <div class="hero-section">
+        <div class="container text-center">
+            <h1 class="display-4 fw-bold mb-3">»Comunidade Vagas de Impacto Social«</h1>
+            <p class="lead mb-0 fw-semibold">Curadoria de Vagas da Semana {first_date} - {last_date}</p>
+        </div>
+        <div class="hero-photo-credits">Foto de Brian J. Tromp</div>
+    </div>
+
+    <!-- Search Box -->
+    <div class="container">
+        <div class="search-box">
+            <div class="row g-2">
+                <div class="col-md-6">
+                    <label class="form-label fw-semibold">Cargo ou Palavra-Chave</label>
+                    <input type="text" class="form-control form-control-lg" id="searchKeyword" placeholder="ex. Analista">
+                </div>
+                <div class="col-md-6">
+                    <label class="form-label fw-semibold">Local</label>
+                    <input type="text" class="form-control form-control-lg" id="searchLocation" placeholder="ex. São Paulo">
+                </div>
+                <!--div class="col-md-2 d-flex align-items-end">
+                    <button class="btn btn-primary btn-lg w-100" onclick="searchJobs()">
+                        <i class="bi bi-search"></i> Search
+                    </button>
+                </div-->
+            </div>
+            <p class="fst-italic text-muted text-disclaimer"> <strong>Aviso importante</strong>: essa curadoria é colaborativa. Algumas vagas podem estar duplicadas ou já ter encerrado o prazo. Sempre confira as informações diretamente no site ou LinkedIn das organizações.</p>
+        </div>
+
+        <!-- Stats Section -->
+        <div class="container stats-section mb-5">
+            <div class="row g-3">
+                <div class="col-md-4">
+                    <div class="stats-box">
+                        <h3 class="stats-number" id="totalJobs">45</h3>
+                        <p class="text-muted mb-0">Vagas</p>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="stats-box">
+                        <h3 class="stats-number">350+</h3>
+                        <p class="text-muted mb-0">Organizações</p>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="stats-box">
+                        <h3 class="stats-nu mber">1,200+</h3>
+                        <p class="text-muted mb-0">Vagas Divulgadas</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- Job Listings -->
+        <div class="row mt-4">
+            <div class="col-12">
+                <h3 class="mb-4">Últimas Vagas Abertas</h3>
+                <div id="jobListings">
+                    <!-- Jobs will be displayed here -->
+                </div>
+                <div id="noResults" class="alert alert-info" style="display: none;">
+                    <i class="bi bi-info-circle"></i> Nenhuma vaga encontrada para a busca feita.
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Our Story Section -->
+    <div class="container mb-5">
+        <h2 class="text-center section-title" id="sobre">Sobre o Prensadão</h2>
+        <div class="row justify-content-center">
+            <div class="col-lg-10">
+                <div class="about-card">
+                    <p class="text-muted">A <strong>Comunidade Vagas de Impacto Social</strong>, com moderação e administração por <a href="https://www.linkedin.com/in/ariel-macena-bra/" target="_blank">Ariel Macena</a> e <a href="https://www.linkedin.com/in/brunodpa/" target="_blank">Bruno Dias</a>, busca facilitar a divulgação de diferentes oportunidades de trabalho na área social. As vagas
+listadas na comunidade são compartilhadas ao longo da semana por diferentes pessoas e organizações,
+e os moderadores da comunidade não são responsáveis pelo conteúdo disponibilizado.<br />
+As vagas aqui listadas representam o compilado do período; recomendamos a todos que avaliem as vagas, suas
+informações, requisitos e validade antes de se candidatarem, sendo quaisquer decisões em relação à
+candidatura responsabilidade do candidato.</p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- People Section -->
+    <div class="container mb-5">
+        <h2 class="text-center section-title">Pessoas e organizações que compartilham Vagas de Impacto no Brasil</h2>
+        <div class="row justify-content-center">
+            <div class="col-lg-10">
+                <div class="about-card">
+                    <div>
+                        <p class="has-line-data" data-line-start="0" data-line-end="16">
+                            📌 Perfil Carla Perdiz - Vagas da ONU e outras organizações – <a href="https://www.linkedin.com/in/carlaperdiz/">https://www.linkedin.com/in/carlaperdiz/</a><br>
+                            📌 Perfil Carlos Eduardo - Vagas Florestais-Ambientais - <a href="https://www.linkedin.com/in/carlos-eduardo-batistade-oliveira/">https://www.linkedin.com/in/carlos-eduardo-batistade-oliveira/</a><br>
+                            📌 Perfil Mateus Tozelli - Vagas Cultura, Educação, Impacto etc. - <a href="https://www.linkedin.com/in/mmtozelli/">https://www.linkedin.com/in/mmtozelli/</a><br>
+                            📌 Perfil da Trabalhar com Impacto - <a href="https://www.linkedin.com/company/trabalharcomimpacto">https://www.linkedin.com/company/trabalharcomimpacto</a><br>
+                            📌 Perfil da Daiane Dultra – <a href="https://www.linkedin.com/in/daiane-dultra/">https://www.linkedin.com/in/daiane-dultra/</a><br>
+                            📌 Perfil da Youth Climate Leaders – <a href="https://www.linkedin.com/company/youthclimateleaders/">https://www.linkedin.com/company/youthclimateleaders/</a><br>
+                            📌 Perfil do Marcus Nakagawa – <a href="https://www.linkedin.com/in/marcusnakagawa/">https://www.linkedin.com/in/marcusnakagawa/</a><br>
+                            📌 Perfil do Pedro Mattosinhos - <a href="https://www.linkedin.com/in/pedromattosinhos/">https://www.linkedin.com/in/pedromattosinhos/</a><br>
+                            📌 Perfil do Caio Dib – <a href="https://www.linkedin.com/in/caiodib/">https://www.linkedin.com/in/caiodib/</a><br>
+                            📌 Página do Advocacy Hub - <a href="https://www.advocacyhub.org/oportunidades">https://www.advocacyhub.org/oportunidades</a><br>
+                            📌 Perfil do CGPPInsper - <a href="https://www.linkedin.com/company/cgpp-insper/">https://www.linkedin.com/company/cgpp-insper/</a><br>
+                            📌 Perfil da Aline Lazzari - <a href="https://www.linkedin.com/in/aline-lazzari">https://www.linkedin.com/in/aline-lazzari</a><br>
+                            📌 Perfil do Rafael Silva - <a href="https://www.linkedin.com/in/edurafaelsilva/">https://www.linkedin.com/in/edurafaelsilva/</a><br>
+                            📌 Perfil Hezi Impacto Social - <a href="https://www.linkedin.com/company/hezii/">https://www.linkedin.com/company/hezii/</a><br>
+                            📌 Plataforma de Vagas ABCR - <a href="https://captadores.org.br/vagas/">https://captadores.org.br/vagas/</a>
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- People Section -->
+    <div class="container mb-5">
+        <h2 class="text-center section-title">Plataformas de Vagas de Impacto Internacionais</h2>
+        <div class="row justify-content-center">
+            <div class="col-lg-10">
+                <div class="about-card">
+                    <div>
+                        <p class="has-line-data" data-line-start="0" data-line-end="16">
+                            🌍 Matteria - Vagas América Latina - <a href="https://www.linkedin.com/company/matteria-/">https://www.linkedin.com/company/matteria-/</a><br>
+                            🌍 Ethos Atlas (: <a href="https://www.linkedin.com/company/ethosatlas/posts/?feedView=all">https://www.linkedin.com/company/ethosatlas/posts/?feedView=all</a><br>
+                            🌍 The Bloom - <a href="https://www.readtobloom.com">https://www.readtobloom.com</a><br>
+                            🌍 Remote Impact Jobs - <a href="https://www.linkedin.com/newsletters/remote-impact-jobs-6989818730562101248/">https://www.linkedin.com/newsletters/remote-impact-jobs-6989818730562101248/</a><br>
+                            🌍 WIAN - <a href="https://www.wianetwork.com/jobs">https://www.wianetwork.com/jobs</a><br>
+                            🌍 Compilado de vagas do Nick Martin - <a href="https://www.linkedin.com/in/nicholascmartin/">https://www.linkedin.com/in/nicholascmartin/</a><br>
+                            🌍 Compilado de vagas da Mara Tissera Luna - <a href="https://www.linkedin.com/in/maratisseraluna/">https://www.linkedin.com/in/maratisseraluna/</a><br>
+                            🌍 Compilado de vagas da Ludovica Anedda - <a href="https://www.linkedin.com/in/ludovicaanedda/">https://www.linkedin.com/in/ludovicaanedda/</a><br>
+                            🌍 Compilado vagas Rawan - <a href="https://www.linkedin.com/in/rawan-taha/">https://www.linkedin.com/in/rawan-taha/</a><br>
+                            🌍 Newsletter #AfricaJobs Board - <a href="https://www.linkedin.com/newsletters/6929530599288225792/">https://www.linkedin.com/newsletters/6929530599288225792/</a><br>
+                            🌍 Impact Pool - <a href="https://www.impactpool.org/search">https://www.impactpool.org/search</a><br>
+                            🌍 Global Charity Jobs - <a href="https://globalcharityjobs.com">https://globalcharityjobs.com</a><br>
+                            🌍 Relief Web - <a href="https://reliefweb.int/jobs">https://reliefweb.int/jobs</a><br>
+                            🌍 Devex - <a href="https://www.devex.com/jobs/search">https://www.devex.com/jobs/search</a>
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <footer class="bg-dark text-white mt-5 py-4">
+        <div class="container text-center">
+            <p class="mb-0">&copy; 2026 Prensadão de Vagas. <br /><small>Desenvolvido por <a href="https://cesarcardoso.cc/" target="_blank">CesarCardoso.cc</a></small></p>
+        </div>
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="{js_file}"></script>
+    <script src="./js/script.js"></script>
+</body>
+</html>
